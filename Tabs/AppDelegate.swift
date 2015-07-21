@@ -15,7 +15,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+
+        // Set up Parse
+        Parse.setApplicationId("oIXvIJ1NpGHkaZhoM9mAEUlj9EWA418Vw6HaQAu0", clientKey: "0EmFyCN0UnP0W4AhnyaJLv9yLpGKYApMlsBTz6kv")
+        // Set default ACLs
+        let defaultACL = PFACL()
+        defaultACL.setPublicReadAccess(true)
+        PFACL.setDefaultACL(defaultACL, withAccessForCurrentUser: true)
+
+        // Set up window
+        window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        let mainViewController     = MainViewController()
+        let navigationController   = UINavigationController(rootViewController: mainViewController)
+        window?.rootViewController = navigationController
+        window?.makeKeyAndVisible()
+        
         return true
     }
 

@@ -1,0 +1,28 @@
+# OS X Finder
+.DS_Store
+
+# Xcode Per-User Config
+*.mode1
+*.mode1v3
+*.mode2v3
+*.perspective
+*.perspective3
+*.pbxuser
+xcuserdata
+*.xccheckout
+
+# Build Products
+build/
+*.o
+*.LinkFileList
+*.hmap
+
+# Automatic Backup Files
+*~.nib/
+*.swp
+*~
+*.dat
+*.dep
+
+# Cocoapods
+Pods
